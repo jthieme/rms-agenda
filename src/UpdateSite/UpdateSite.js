@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Announcements from '../Announcements/Announcements';
-import InputInfo from '../InputInfo/InputInfo';
 
 function UpdateSite(props){
 

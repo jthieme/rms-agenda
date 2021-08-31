@@ -19,24 +19,18 @@ function Announcements(props){
 
     const formatData = (res) => {
         for (var i = 0; i < res.data.length; i++){
+            // checking all of the fields
             if (res.data[i].theme === '' || res.data[i].date === '' || res.data[i].presiding === '' 
                 || res.data[i].conducting === '' || res.data[i].chorister === '' || res.data[i].pianist === ''
                 || res.data[i].oPrayer === '' || res.data[i].oHymn === '' || res.data[i].sHymn === ''
                 || res.data[i].fSpeaker === '' || res.data[i].sSpeaker === '' || res.data[i].iHymn === ''
                 || res.data[i].tSpeaker === '' || res.data[i].cPrayer === '' || res.data[i].cHymn === ''
                 || res.data[i].announcements === ''){
+                // this gets data from the second to last database entry
                 prevData = res.data[i-(i%2)];
-                // if (prevData === 'undefined'){
-                //     console.log('LAME')
-                // }
-                // console.log(prevData)
-                // console.log('im empty')
+
                 setPrevData(prevData)
-                // console.log(prevData)
-                // console.log(res.data[i])
             }
-            
-            // console.log('im full')
             setData(res.data[i]);
         }
     }
@@ -63,22 +57,6 @@ function Announcements(props){
                                 Third Speaker: {data.tSpeaker !== '' ? data.tSpeaker : prevData.tSpeaker}<br />
                                 Closing Hymn: {data.cHymn !== '' ? data.cHymn : prevData.cHymn}<br />
                                 Closing Prayer: {data.cPrayer !== '' ? data.cPrayer : prevData.cPrayer}<br />
-
-                                {/* Monthly Theme: <br/>{data.theme}<br/><br/>  */}
-                                {/* Sacrament Meeting for Sunday, {data.date}<br /> */}
-                                {/* Presiding: {data.presiding}<br /> */}
-                                {/* Conducting: {data.conducting}<br /><br/> */}
-                                {/* Choristor: {data.chorister}<br /> */}
-                                {/* Organist / Pianist: {data.pianist}<br /><br/> */}
-                                {/* Opening Prayer: {data.oPrayer}<br /> */}
-                                {/* Opening Hymn: {data.oHymn}<br /> */}
-                                {/* Sacrament Hymn: {data.sHymn}<br /> */}
-                                {/* First Speaker: {data.fSpeaker}<br /> */}
-                                {/* Second Speaker: {data.sSpeaker}<br /> */}
-                                {/* Intermediate Hymn: {data.iHymn}<br /> */}
-                                {/* Third Speaker: {data.tSpeaker}<br /> */}
-                                {/* Closing Hymn: {data.cHymn}<br /> */}
-                                {/* Closing Prayer: {data.cPrayer}<br /> */}
                             </p>
                         </div>
                     </div>
@@ -107,12 +85,10 @@ function Announcements(props){
  
             </div>
             <div className="container footer col s12">
-
                     <div className="col s12">
                     <h5>Rexburg Married Student 26<sup>th</sup> Ward</h5>
                     <div className="footer-copyright ">
                         <div className="container left">
-
                                 <ul id="nav-mobile" className="left inline link-color">
                                     <li><a href="https://rms26ward.org">Home</a></li>
                                     <li><Link to="/announcements">Announcements</Link></li>
@@ -123,7 +99,6 @@ function Announcements(props){
                                     <li><a href="https://rms26ward.org/ward-council">Ward Council</a></li>
                                     <li><a href="https://rms26ward.org/location">Location</a></li>
                                 </ul>
-
                         </div>
                     </div>
                 </div>
@@ -141,11 +116,7 @@ function Announcements(props){
                         </div>
                     </div>
                 </div>
-
-                
-
             </div>
-            
         </div>
     )
 }
