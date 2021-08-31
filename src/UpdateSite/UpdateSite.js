@@ -47,7 +47,7 @@ function UpdateSite(props){
 
     const submitForm = async (e) =>{
         e.preventDefault();
-        const updateUrl = 'http://localhost:5050/update/create';
+        const updateUrl = 'https://jthieme.github.io/rms-agenda/update/create';
         await axios.post(updateUrl, data);
         console.log(data)
     }

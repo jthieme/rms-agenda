@@ -5,7 +5,7 @@ import './Announcements.css';
 
 function Announcements(props){
 
-    const url = 'http://localhost:5050/update/find';
+    const url = 'https://jthieme.github.io/rms-agenda/update/find';
 
     const [ data, setData ] = useState('');
     var [ prevData, setPrevData ] = useState('')
