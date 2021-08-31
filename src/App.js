@@ -9,7 +9,7 @@ import NavBar from './NavBar/NavBar';
 class App extends Component {
   render(){
     return (
-      <Router basename="/rms-agenda">
+      <Router basename="/rms-agenda/">
           <Suspense>
 
             <Route exact path="/" component={UpdateSite} />
